@@ -1,55 +1,80 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gaming Hub</title>
-<style>
-  /* Add your CSS styles here */
-  body { font-family: Arial, sans-serif; }
-  header { background: #333; color: white; padding: 10px 0; }
-  nav ul { list-style-type: none; padding: 0; }
-  nav ul li { display: inline; margin-right: 10px; }
-  nav a { color: white; text-decoration: none; }
-  .featured-games { background: #f7f7f7; padding: 20px 0; }
-  .news { padding: 20px 0; }
-  footer { background: #333; color: white; text-align: center; padding: 10px 0; }
-</style>
-</head>
-<body>
+    <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-<header>
-  <div class="container">
-    <h1>Gaming Hub</h1>
-    <nav>
-      <ul>
-        <li><a href="#games">Games</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+          gtag('config', 'G-7FN7LEVWXD');
+        </script>
 
-<section class="featured-games">
-  <div class="container">
-    <h2>Featured Games</h2>
-    <!-- Add featured games here -->
-  </div>
-</section>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/images/ico.ico" type="image/x-icon">
+        <link rel="stylesheet" href="storage/css/index4.css">
+        <title>Home | Seraph</title>
 
-<section class="news">
-  <div class="container">
-    <h2>Latest News</h2>
-    <!-- Add latest gaming news here -->
-  </div>
-</section>
+        <meta name="description" content="seraph; an open source unblocked games website hosting 250+ games with downloadable support, a clean and centralised user interface and no iframe embedding">
+        <meta property="og:site_name" content="seraph">
+        <meta property="og:title" content="seraph">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="seraph; an open source unblocked games website hosting 250+ games with downloadable support, a clean and centralised user interface and no iframe embedding">
+  </head>
+  <body>
+    
+      <div class="cursor"></div>
+      <div class="content-side">
+          <h1 class="typewriter"><span id="cursor"></span></h1>
+          <h2>version 8 / release build</h2>
+          <br>
 
-<footer>
-  <div class="container">
-    <p>© 2024 Gaming Hub</p>
-  </div>
-</footer>
+          <div class="button-container">
+              <div class="gamesbutton" onclick="window.location='games/index.html';">
+                  <img src="images/other/controller.png">
+                  <div class="button-text">
+                      <p>v-games-2</p>
+                  </div>
+              </div>
+          
+              <div class="gamesbutton" onclick="window.location='apps/index.html';">
+                  <a href="apps/index.html"><img src="images/other/apps.png"></a>
+                  <div class="button-text">
+                      <p>apps</p>
+                  </div>
+              </div>
+          </div>
+          
 
-</body>
+          <br>
+
+      </div>
+
+      <script>
+        const text = "V-Games-2";
+        const typingDelay = 500; 
+        const initialDelay = 100; 
+        const cursor = document.getElementById("cursor");
+        const h1 = document.querySelector(".typewriter");
+
+        function type() {
+            setTimeout(() => {
+                for (let i = 0; i < text.length; i++) {
+                setTimeout(() => {
+                    h1.textContent += text[i];
+                    if (i === text.length - 1) {
+                    cursor.style.display = "none"; 
+                    }
+                }, i * typingDelay);
+                }
+            }, initialDelay);
+        }
+
+        type();
+      </script>
+
+      <script src="storage/js/cursor.js"></script>
+      <script src="storage/js/cloak.js"></script>
+      <script src="storage/js/theme.js"></script>
+  </body>
 </html>
